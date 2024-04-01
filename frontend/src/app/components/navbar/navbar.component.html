@@ -1,0 +1,37 @@
+<nav class="nav">
+    <div class="nav_marca">
+        
+        <h1 class="nav_marca_nombre"><i>🏝️</i>Paradise Films</h1>
+    </div>
+    <ul class="nav_ul"> 
+        
+        @if((soyAdmin === 'admin')){
+            <li class="nav_ul_li">
+                <a class="nav_ul_li_a" routerLink="/adminFilms">Admin Películas</a>
+            </li>
+            <li class="nav_ul_li">
+                <a class="nav_ul_li_a" routerLink="/adminUsers">Admin Usuarios</a>
+            </li>
+        }
+        @if(soyAdmin){            
+            <li class="nav_ul_li">
+                <a class="nav_ul_li_a" routerLink="/films">Películas</a>
+            </li>
+            <button class="nav_ul_li_button" type = "button" (click) = "doLogout()" routerLink="/">Cerrar Sesión</button>
+            
+        } @else {
+            <li class="nav_ul_li">
+                <a class="nav_ul_li_a" routerLink="/">Home</a>
+            </li>
+            <li class="nav_ul_li">
+                <a class="nav_ul_li_a" routerLink="/login">Login</a>
+            </li>
+            <li class="nav_ul_li">
+                <a class="nav_ul_li_a" routerLink="/register">Register</a>
+            </li>
+        }
+        
+        
+        
+    </ul>
+</nav>

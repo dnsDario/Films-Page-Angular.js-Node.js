@@ -1,0 +1,25 @@
+<form class="form" [formGroup] = "registerForm" (ngSubmit)="doRegister()">
+    <fieldset class="form_fieldset">
+        <label for="name">Email:</label>
+        <input class="form_fieldset_input" formControlName="name" type="text" placeholder="Name">
+    </fieldset>
+    <fieldset class="form_fieldset">
+        <label for="email">Email:</label>
+        <input class="form_fieldset_input" formControlName="email" type="email" placeholder="Email">
+    </fieldset>
+    <fieldset class="form_fieldset">
+        <label for="password">Contraseña:</label>
+        <div>
+            <input class="form_fieldset_input" formControlName="password" [type]="hidePassword? 'password':'text'"/>
+        </div>
+        
+    </fieldset>
+    <fieldset class="form_fieldset">
+        <label for="password">Contraseña:</label>
+        <div>
+            <input class="form_fieldset_input" formControlName="repetirPassword" [type]="hidePassword? 'password':'text'"/>
+        </div>
+        
+    </fieldset>
+    <button class="form_button_submit" type="submit">Regístrate</button>
+</form>

@@ -1,0 +1,60 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color:black;
+}
+.nav_marca {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: clamp(20%, 25vw, 30%);
+    height: 85%;
+    margin-left: 2%;
+}
+.nav_marca_nombre {
+    font-size: clamp(14px, 3vw, 40px);
+    margin: auto 0;
+    color: aquamarine;
+}
+
+
+.nav_ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 65%;
+    height: 30px;
+    padding-right: clamp(20px, 5%, 50px);
+}
+.nav_ul_li {
+    display: flex;
+    text-align: center;
+    margin: auto 10px;
+}
+.nav_ul_li:hover{
+    scale: 1.1;
+}
+
+.nav_ul_li_a{
+    font-size: clamp(12px, 2vw, 24px);
+    color: aquamarine;
+}
+
+
+.nav_ul_li_button{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px aquamarine solid;
+    border-radius: 3px;
+    background-color: black;
+    font-size: clamp(12px, 2vw, 24px);
+    color: red;
+}
+.nav_ul_li_button:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
