@@ -19,13 +19,11 @@ export class FilmComponent {
       next:(res: any)=> {
         this.filmId = res.id,
         this.filmService.findById(this.filmId).subscribe({
-          next: (res) => {
-            this.film = res as Film,
-            console.log('esta es la pelicula', res)
-          },
+          next: (res) => this.film = res as Film,
           error: (err) => console.log(err)
         })
-      }
+      },
+      error:(err) => console.log(err)
     })
     
   }

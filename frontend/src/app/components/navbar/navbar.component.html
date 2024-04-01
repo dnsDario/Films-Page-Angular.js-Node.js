@@ -5,7 +5,7 @@
     </div>
     <ul class="nav_ul"> 
         
-        @if((soyAdmin === 'admin')){
+        @if((hayToken && soyAdmin)){
             <li class="nav_ul_li">
                 <a class="nav_ul_li_a" routerLink="/adminFilms">Admin Películas</a>
             </li>
@@ -13,7 +13,7 @@
                 <a class="nav_ul_li_a" routerLink="/adminUsers">Admin Usuarios</a>
             </li>
         }
-        @if(soyAdmin){            
+        @if(hayToken){            
             <li class="nav_ul_li">
                 <a class="nav_ul_li_a" routerLink="/films">Películas</a>
             </li>

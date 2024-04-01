@@ -13,7 +13,7 @@
 
 .contenedor_h1{
     width: 70%;
-    margin-top: 25vh;
+    margin-top: 20vh;
     color: aquamarine;
     font-size: clamp(28px, 50vw, 42px);
     font-weight: 900;

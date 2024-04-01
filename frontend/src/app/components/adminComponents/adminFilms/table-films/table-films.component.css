@@ -1,0 +1,44 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+.buscador{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+table {
+    display: block;
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin: 0 auto;
+}
+table thead, table tbody{
+  border: 5px solid aquamarine;
+}
+table thead{
+  height: 40px;
+}
+
+table th, table td {
+  color:white;
+  border: 3px solid aquamarine;
+  padding: 2px;
+  text-align: center;
+}
+table th {
+  background-color: #000000;
+  font-weight: bold;
+  
+}
+table tr:hover {
+  background-color: #423d3d;
+}
+table tr img {
+  margin: 0 auto;
+  height: 100px;
+}

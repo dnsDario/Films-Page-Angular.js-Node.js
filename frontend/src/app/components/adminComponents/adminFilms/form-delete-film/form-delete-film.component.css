@@ -1,0 +1,31 @@
+.titleInputAndButtonDeleteFilms{
+    display: flex;
+    flex-flow: column wrap;
+    width: 95%;
+    justify-content: flex-start;
+    margin-left: 10px;
+    padding: 10px;
+    border: 5px solid aquamarine;
+    border-radius: 20px;
+}
+.titleInputAndButtonDeleteFilms h3{
+    color: aquamarine;
+    margin: 10px 20px;
+    font-size: clamp(14px, 3vw, 22px);
+}
+.inputAndButtonDeleteFilms{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.inputAndButtonDeleteFilms input{
+    width: 60%;
+    margin: 10px 20px;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+.inputAndButtonDeleteFilms button{
+    width: 30%;
+}

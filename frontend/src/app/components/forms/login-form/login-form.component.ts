@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserLoginData } from '../../../interfaces/dto/user-login-data';
 import { UserService } from '../../../services/user.service';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -19,8 +21,11 @@ export class LoginFormComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private cookies: CookieService,
+    private router: Router
   ) {}
+
 
   doLogin() {
     const data: UserLoginData = {
@@ -30,9 +35,13 @@ export class LoginFormComponent {
     this.userService.login(data).subscribe({
       next: (res: any) => {
         this.userService.setTokenSetRole(res.token, res.role),
+        this.router.navigate(['/films']);
         console.log(res)},
         
       error: (err) => console.log(err),
     });
+    
   }
+
+
 }

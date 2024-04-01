@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserRegisterData } from '../../../interfaces/dto/user-register-data';
 import { UserService } from '../../../services/user.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register-form',
   standalone: true,
@@ -20,7 +21,9 @@ export class RegisterFormComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService){}
+    private userService: UserService,
+    private router: Router
+    ){}
 
     doRegister(){
       const data: UserRegisterData = {
@@ -32,6 +35,7 @@ export class RegisterFormComponent {
       this.userService.register(data).subscribe({
         next: (res: any) => {
           alert('Enhorabuena, se ha registrado con exito'),
+          this.router.navigate(['/login']);
           console.log(res)},
         error: (err) => console.log(err)
       });

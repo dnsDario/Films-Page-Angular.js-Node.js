@@ -1,0 +1,28 @@
+<div class="contenedor">
+    <div class="buscador">
+        <app-searcher (filtroOutput)="filtrado($event)"></app-searcher>
+        <table>
+            <thead>
+                <tr>
+                <th>Imagen</th>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Catagoría</th>
+                <th>Director</th>
+                </tr>
+            </thead>
+            <tbody>            
+                <tr *ngFor="let x of (filmsFiltered.length > 0 ? filmsFiltered : films); let i = index">
+                    <td>
+                    <img [src]="x.img" [alt]="x.title" />
+                    </td>
+                    <td>{{ x._id }}</td>
+                    <td>{{ x.title }}</td>
+                    <td>{{ x.category }}</td>
+                    <td>{{ x.director }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
