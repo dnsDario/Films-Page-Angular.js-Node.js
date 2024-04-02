@@ -1,9 +1,17 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    align-items: center;
+}
+
 .titleInputAndButtonDeleteFilms{
     display: flex;
     flex-flow: column wrap;
-    width: 95%;
-    justify-content: flex-start;
-    margin-left: 10px;
+    width: 100%;
+    justify-content: center;
     padding: 10px;
     border: 5px solid aquamarine;
     border-radius: 20px;
@@ -17,10 +25,12 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    align-items: center;
 }
 
 .inputAndButtonDeleteFilms input{
     width: 60%;
+    height: 30px;
     margin: 10px 20px;
     color: black;
     border-radius: 10px;
@@ -28,4 +38,14 @@
 }
 .inputAndButtonDeleteFilms button{
     width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.532);
+    color: yellow;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 700;
+}
+.inputAndButtonDeleteFilms button:hover{
+    cursor: pointer;
+    scale:1.1;
 }

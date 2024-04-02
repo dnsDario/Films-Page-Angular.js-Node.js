@@ -36,12 +36,12 @@ export const routes: Routes = [
     {
         path: "adminUsers",
         component: AdminUsersComponent,
-        canActivate: [authGuard],
+        
     },
     {
         path: "adminFilms",
         component: AdminFilmsComponent,
-        canActivate: [authGuard],
+        
     },
     {
         path: "**",

@@ -3,12 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Film } from '../../interfaces/film';
 import { FilmService } from '../../services/film.service';
 import { RouterModule } from '@angular/router';
-import { FilmComponent } from './film/film.component';
+
 
 @Component({
   selector: 'app-films',
   standalone: true,
-  imports: [FilmComponent, RouterModule],
+  imports: [RouterModule],
   templateUrl: './films.component.html',
   styleUrl: './films.component.css'
 })

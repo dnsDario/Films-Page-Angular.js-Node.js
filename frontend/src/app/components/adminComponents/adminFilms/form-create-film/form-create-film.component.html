@@ -1,1 +1,33 @@
-<p>form-create-film works!</p>
+<div class="contenedor">
+    <form class="form" [formGroup] = "createFilmForm" (ngSubmit)="createFilm()">
+        <h3>Añade una Película:</h3>
+        <fieldset class="form_fieldset">
+            <label for="title">Título</label>
+            <input class="form_fieldset_input" type="text" formControlName="title" placeholder="">
+        </fieldset>
+        <fieldset class="form_fieldset">
+            <label for="year">Año</label>
+            <input class="form_fieldset_input" type="number" formControlName="year" placeholder="">
+        </fieldset>
+        <fieldset class="form_fieldset">
+            <label for="img">Imagen</label>
+            <input class="form_fieldset_input" type="text" formControlName="img" placeholder="">
+        </fieldset>
+        <fieldset class="form_fieldset">
+            <label for="director">Director</label>
+            <input class="form_fieldset_input" type="text" formControlName="director" placeholder="">
+        </fieldset>
+        <fieldset class="form_fieldset">
+            <label for="category">Categoría</label>
+            <input class="form_fieldset_input" type="text" formControlName="category" placeholder="">
+        </fieldset>
+        <fieldset class="form_fieldset">
+            <label for="synopsis">Sinopsis</label>
+            <input class="form_fieldset_input" type="text" formControlName="synopsis" placeholder="">
+        </fieldset>
+        
+        <button class="form_button_submit" type="submit">Crear Película</button>
+
+
+    </form>
+</div>
