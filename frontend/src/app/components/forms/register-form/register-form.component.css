@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    min-width: 250px;
+    min-width: 300px;
     width: 40%;
     max-width: 450px;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color:rgba(127, 255, 212, 0.599);
+    border: 5px aquamarine solid;
+    border-radius: 20px;
+    background-color:black;;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .form_fieldset {
@@ -21,18 +21,22 @@
     margin: 10px 0;
 }
 .form_fieldset_input {
-    width: 80%;
+    width: 95%;
+    height: 25px;
     margin-bottom: 5px;
+    font-size: 16px;
 }
 label{
     font-size: 18px;
     font-weight: 700;
+    color:white;
+    margin-bottom: 5px;
 }
 
 .form_fieldset_button_verPwd {
-    width: 25px;
+    width: 25px;;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgba(255, 68, 0, 0.716);
     margin-left: 10px;
 }
 .form_fieldset_button_verPwd:hover{
@@ -41,6 +45,7 @@ label{
 }
 .form_button_submit {
     width: 80px;
+    height: 25px;
     margin-top: 10px;
     border: 3px black solid;
     font-weight: 600;

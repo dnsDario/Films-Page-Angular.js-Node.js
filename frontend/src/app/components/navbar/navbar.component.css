@@ -15,7 +15,7 @@
     margin-left: 2%;
 }
 .nav_marca_nombre {
-    font-size: clamp(14px, 3vw, 40px);
+    font-size: clamp(18px, 3vw, 40px);
     margin: auto 0;
     color: aquamarine;
 }
@@ -27,19 +27,19 @@
     justify-content: space-around;
     width: 65%;
     height: 30px;
-    padding-right: clamp(20px, 5%, 50px);
+    padding-right: clamp(20px, 5vw, 50px);
 }
 .nav_ul_li {
     display: flex;
     text-align: center;
-    margin: auto 10px;
+    margin: auto 5px;
 }
 .nav_ul_li:hover{
     scale: 1.1;
 }
 
 .nav_ul_li_a{
-    font-size: clamp(12px, 2vw, 24px);
+    font-size: clamp(16px, 2vw, 24px);
     color: aquamarine;
 }
 

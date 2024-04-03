@@ -2,44 +2,79 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 400px;
+    height:360px;
     background-color: rgb(48, 46, 46);
     color: rgba(255, 255, 255, 0.744);
     margin-top: 80px;
     overflow-y: hidden;
     scrollbar-color: aquamarine;
+    text-align: left;
 }
 .img {
     width: auto;
-    height: 400px;
+    height:360px;
+}
+.film_datos{
+    display: flex;
+    flex-direction: row;
+    margin: 0 15px;
 }
 
 .film_datos_principales{
     display: flex;
     flex-direction: column;
-    margin: 20px 20px;
-    width: 60%;
+    width: 35%;
+    margin-right: 15px;
     
-    }
+}
 .title{
     font-size: clamp(28px, 4vw, 44px);
     margin-block: 10px;
     color: white;
 }
 .director {
-    font-size: clamp(22px, 3vw, 30px);
+    font-size: clamp(18px, 2vw, 28px);
     margin-block: 10px;
 }
 .year {
-    font-size: clamp(22px, 3vw, 30px);
+    font-size: clamp(18px, 3vw, 30px);
     margin-block: 10px;
 }
 .category {
-    font-size: clamp(16px, 2vw, 22px);
+    font-size: clamp(14px, 1.9vw, 22px);
     margin-block: 10px;
+    text-align:justify;
 }
 .synopsis {
-    width: 60%;
-    margin: 15px;
-    font-size: clamp(10px, 1.3vw, 18px)
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+    width: 65%;
+    margin-block: 10px;
+    font-size: clamp(13px, 1.3vw, 20px);
+    font-weight: 100;
+}
+
+@media screen and (max-width: 764px){
+
+    .film{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .film_datos{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .film_datos_principales{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        text-align: left;
+    }
+    .synopsis {
+        width: 95%;
+    }
 }
