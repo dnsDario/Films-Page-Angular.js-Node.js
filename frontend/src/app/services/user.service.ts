@@ -3,7 +3,7 @@ import { Injectable} from '@angular/core';
 import { UserLoginData } from '../interfaces/dto/user-login-data';
 import { UserRegisterData } from '../interfaces/dto/user-register-data';
 import { CookieService } from 'ngx-cookie-service';
-import { Observable, Subject, firstValueFrom } from 'rxjs';
+import { Observable, Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

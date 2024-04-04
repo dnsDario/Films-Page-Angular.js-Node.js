@@ -8,7 +8,7 @@
 .titleInputAndButtonUsers{
     display: flex;
     flex-flow: column wrap;
-    width: 300px;
+    min-width: 300px;
     justify-content: flex-start;
     margin: 0 auto;
     padding: 10px;
@@ -25,7 +25,7 @@
 .titleInputAndButtonUsers label{
   color: aquamarine;
   margin: 10px 20px;
-  font-size: clamp(14px, 3vw, 22px);
+  font-size: clamp(18px, 3vw, 24px);
 }
 .inputAndButtonUsers input{
   width: 60%;
@@ -42,7 +42,7 @@
   background-color: rgba(255, 47, 47, 0.527);
   color: yellow;
   font-size: clamp(12px, 2vw, 16px);
-  font-weight: 700;
+  font-weight: 600;
 }
 .inputAndButtonUsers button:hover{
   cursor: pointer;
@@ -51,7 +51,7 @@
 
 @media screen and (min-width: 766px) {
   .contenedor{
-    width: 460px;
+    width: 550px;
     margin-top: 20px;
   }
 }

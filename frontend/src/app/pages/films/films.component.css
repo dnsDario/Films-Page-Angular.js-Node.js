@@ -21,7 +21,7 @@
     height: 300px;
     border: 2px black solid;
     border-radius: 2px;
-    background-color: white;
+    background-color: rgb(239, 231, 231);
     color: black;
     margin: 30px 20px;
 }
@@ -29,6 +29,7 @@
     width: 180px;
     height: 200px;
     padding: 10px;
+    mask-image: linear-gradient(black 85%, transparent);
 }
 .contenedor_films_film_img_h4{
     margin: 5px 15px;

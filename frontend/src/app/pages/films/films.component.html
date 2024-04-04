@@ -1,14 +1,17 @@
 <div class="contendor">
     <router-outlet/>
-    <ul class="contenedor_films">        
-        @for(film of films; track film._id){
-            <a [routerLink]="'/films/'+film._id">
-                <li class="contenedor_films_film">
-                    <img class="contenedor_films_film_img" src="{{film.img}}" alt="img{{film._id}}">
-                    <h4 class="contenedor_films_film_img_h4"> {{film.title}} </h4>
-                    <h4 class="contenedor_films_film_img_h4"> {{film.year}} </h4>
-                </li>
-            </a>                
-        }
+    <ul class="contenedor_films">
+        @if(films.length > 0){
+            @for(film of films; track film._id){
+                <a [routerLink]="'/films/'+film._id">
+                    <li class="contenedor_films_film">
+                        <img class="contenedor_films_film_img" src="{{film.img}}" alt="img{{film._id}}">
+                        <h4 class="contenedor_films_film_img_h4"> {{film.title}} </h4>
+                        <h4 class="contenedor_films_film_img_h4"> {{film.year}} </h4>
+                    </li>
+                </a>                
+            }
+        } @else {}       
+        
     </ul>
 </div>

@@ -1,9 +1,19 @@
-import { inject } from '@angular/core';
-import { AuthService } from './../services/guardServices/auth.service';
-import { CanActivateFn } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
-/* No se consigue usar adecuadamente */
-export const authGuard: CanActivateFn = (route, state) => {
-  const authService = inject(AuthService);
-  return authService.getAuthToken();
-};
+@Injectable({
+  providedIn: 'root',
+})
+export class AuthGuard implements CanActivate {
+  constructor(private cookieService: CookieService) {}
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    const cookieToken = this.cookieService.get('token');
+    if (cookieToken) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}

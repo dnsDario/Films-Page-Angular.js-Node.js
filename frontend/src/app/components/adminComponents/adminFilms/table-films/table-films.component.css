@@ -27,7 +27,8 @@
 .titleInputAndButtonFilms label{
   color: aquamarine;
   margin: 10px 20px;
-  font-size: clamp(14px, 3vw, 22px);
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
 }
 .inputAndButtonFilms input{
   width: 60%;
