@@ -1,0 +1,9 @@
+<div class="contenedor">
+    <form class="titleInputAndButtonUsers" [formGroup]="deleterUser" (ngSubmit)="deleteUser()">
+      <label>Busca por ID el usuario a borrar</label>
+      <fieldset class="inputAndButtonUsers">
+          <input type="text" formControlName="id" placeholder="Introduzca ID" />
+          <button type="submit">Borrar</button>
+      </fieldset>
+  </form>
+  </div>

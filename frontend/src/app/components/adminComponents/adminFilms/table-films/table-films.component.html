@@ -1,7 +1,7 @@
 <div class="contenedor">
-    <form class="titleInputAndButtonDeleteFilms" [formGroup]="searcherFilm" (ngSubmit)="searchFilm()">
+    <form class="titleInputAndButtonFilms" [formGroup]="searcherFilm" (ngSubmit)="searchFilm()">
         <label>Filtra las películas por nombre</label>
-        <fieldset class="inputAndButtonDeleteFilms">
+        <fieldset class="inputAndButtonFilms">
             <input type="text" formControlName="film" placeholder="Introduzca nombre de la película" />
             <button type="submit">Buscar</button>
         </fieldset>

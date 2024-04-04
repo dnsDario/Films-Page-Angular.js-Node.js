@@ -3,6 +3,7 @@ import { FormBuilder,FormControl,FormGroup, FormsModule, ReactiveFormsModule, Va
 import { UserRegisterData } from '../../../interfaces/dto/user-register-data';
 import { UserService } from '../../../services/user.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-register-form',
   standalone: true,
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './register-form.component.html',
   styleUrl: './register-form.component.css'
 })
+
 export class RegisterFormComponent {
   hidePassword: boolean = true;
   registerForm: FormGroup = this.formBuilder.group({

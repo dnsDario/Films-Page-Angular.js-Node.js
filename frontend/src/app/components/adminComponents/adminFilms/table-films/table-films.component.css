@@ -2,33 +2,34 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 350px;
     height: auto;
     background-color: black;
+    margin-top: 20px;
 }
-.titleInputAndButtonDeleteFilms{
+.titleInputAndButtonFilms{
     display: flex;
     flex-flow: column wrap;
     width: 80%;
-    max-width: 500px;
     justify-content: flex-start;
     margin: 0 auto;
     padding: 10px;
     border: 5px solid aquamarine;
     border-radius: 20px;
 }
-.inputAndButtonDeleteFilms{
+.inputAndButtonFilms{
     display: flex;
     flex-direction: row;
     width: 100%;
     border: none;
     align-items: center;
 }
-.titleInputAndButtonDeleteFilms label{
+.titleInputAndButtonFilms label{
   color: aquamarine;
   margin: 10px 20px;
   font-size: clamp(14px, 3vw, 22px);
 }
-.inputAndButtonDeleteFilms input{
+.inputAndButtonFilms input{
   width: 60%;
   height: 30px;
   margin: 10px 20px;
@@ -36,7 +37,7 @@
   border-radius: 10px;
   text-align: center;
 }
-.inputAndButtonDeleteFilms button{
+.inputAndButtonFilms button{
   width: 30%;
   height: 40px;
   border-radius: 10px;
@@ -45,25 +46,22 @@
   font-size: clamp(12px, 2vw, 16px);
   font-weight: 700;
 }
-.inputAndButtonDeleteFilms button:hover{
+.inputAndButtonFilms button:hover{
   cursor: pointer;
   scale:1.1;
 }
 
 table {
     display: block;
-    max-width: 85%;
+    max-width: 90%;
     border-collapse: collapse;
-    font-size: 12px;
+    font-size: 12px;    
     margin: 30px auto;
-    
-    
 }
 table thead, table tbody{
   border: 5px solid aquamarine;
 }
 table thead{
-  width: 100%;
   height: 40px;
 }
 table tbody{
@@ -74,8 +72,9 @@ table th, table td {
   height: 120px;
   color:white;
   border: 3px solid aquamarine;
-  padding: 2px;
+  padding: 5px;
   text-align: center;
+  font-size: 13px;
 }
 table th {
   height: 50px;

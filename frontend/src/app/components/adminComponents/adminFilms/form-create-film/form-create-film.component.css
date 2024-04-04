@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    width: clamp(280px, 25vw, 600px);
+    width: 75%;
     padding: 20px;
     border: 5px solid aquamarine;
     background-color:black;
@@ -17,7 +17,7 @@
     
 }
 .form h3{
-    font-size: clamp(18px, 3vw, 22px);
+    font-size: clamp(22px, 3vw, 26px);
     color: aquamarine;
     margin-bottom: 20px;
 }
@@ -31,13 +31,14 @@
     margin: 5px 0;
 }
 .form_fieldset_input {
-    width: 80%;
-    margin-bottom: 5px;
+    width: 90%;
+    height: 25px;
 }
 label{
     font-size: 18px;
     font-weight: 700;
     color: aquamarine;
+    margin-bottom: 5px;
 }
 
 .form_button_submit {
@@ -48,6 +49,7 @@ label{
     color: yellow;
     font-size: clamp(12px, 2vw, 16px);
     font-weight: 700;
+    margin-top: 20px;
 }
 .form_button_submit:hover{
     cursor: pointer;

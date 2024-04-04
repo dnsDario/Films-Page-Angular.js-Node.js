@@ -1,10 +1,10 @@
 <div class="contenedor">
-  <div class="titleInputAndButtonDeleteFilms" [formGroup]="deleterFilm" (ngSubmit)="deleteFilm()">
-    <h3>Borrar películas por ID</h3>
-    <div class="inputAndButtonDeleteFilms">
-      <input type="text" formControlName="id" placeholder="Introduzca ID de la película" />
-      <button type="submit">Eliminar</button>
-    </div>
-  </div>
+  <form class="titleInputAndButtonFilms" [formGroup]="deleterFilm" (ngSubmit)="deleteFilm()">
+    <label>Busca por ID la película a borrar</label>
+    <fieldset class="inputAndButtonFilms">
+        <input type="text" formControlName="id" placeholder="Introduzca ID" />
+        <button type="submit">Borrar</button>
+    </fieldset>
+</form>
 </div>
 

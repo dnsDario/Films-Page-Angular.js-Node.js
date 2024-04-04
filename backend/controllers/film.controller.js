@@ -3,7 +3,7 @@ const Film = require("../models/film.model");
 async function findAll(req, res) {
   try {
     const films = await Film.find();
-    return res.json(films);
+    return res.status(200).json(films);
   } catch (error) {
     console.log(error);
     return res
@@ -15,7 +15,7 @@ async function findAll(req, res) {
 async function findById(req, res) {
   try {
     const film = await Film.findById(req.params.id);
-    return res.json(film);
+    return res.status(200).json(film);
   } catch (error) {
     console.log(error);
     return res
@@ -35,7 +35,7 @@ async function insert(req, res) {
       category: req.body.category,
     });
     await newFilm.save();
-    return res.json({msg: "película creada con éxito", newFilm})
+    return res.status(200).json({msg: "película creada con éxito", newFilm})
   } catch(error) {
     console.log(error);
     return res.status(500).json({ msg: "error al guardar la pelicula" });
@@ -45,12 +45,13 @@ async function insert(req, res) {
 async function deleteOne(req, res){
 try{
     const filmDeleted = await Film.findByIdAndDelete(req.params.id)
-    return res.json({msg: "pelicula elminada: ", filmDeleted })
+    return res.status(200).json({msg: "pelicula elminada: ", filmDeleted })
 } catch(error){
     console.log(error)
-    return res.status(500).json({msg: "error al borrar la pelicula"})
+    return res.status(500).json({msg: "error interno del servidor"})
 
 }}
+
 
 
 

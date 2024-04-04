@@ -28,9 +28,9 @@ export class TableFilmsComponent implements OnInit{
     this.filmService.findAll().subscribe({
       next:(res) =>{
         this.films = res as Film[],
-        console.log('aqui films',this.films)
+        console.log('aqui films', this.films)
       },
-      error:(err) => console.log('error al cargar las peliculas'+ err)
+      error:(err) => console.log('error al cargar alguna pelicula (fallo en carga de imagen)')
     })
   }
 

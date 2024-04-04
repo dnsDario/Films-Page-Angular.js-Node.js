@@ -42,33 +42,32 @@
 }
 
 .listaBuscadorFilms{
-    margin: 20px 0px;
     width: 90%;
     min-width: 350px;
-    height: 700px;
+    height: 1000px;
     overflow-y: auto;
     scrollbar-width: none;
 }
 
 .crearBorrar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    margin: 20px 0px;
+    width: 90%;
     min-width: 350px;
     height: auto;
-    margin: 20px 0px;;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 @media screen and (max-width: 1124px) {
     .admin {
         flex-direction: column;
         align-items: center;
+        width: 90%;
     }
     .listaBuscadorFilms {
         width: 100%;
     }
     .crearBorrar{
-        width: 50%;
+        width: 100%;
     }
 }

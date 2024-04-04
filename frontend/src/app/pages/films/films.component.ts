@@ -18,7 +18,7 @@ export class FilmsComponent implements OnInit{
   ngOnInit(): void {
     this.filmService.findAll().subscribe({
       next:(res) => this.films = res as Film[],
-      error:(err) => console.log(err)
+      error:(err) => console.log('error en films')
     })
   }
 }

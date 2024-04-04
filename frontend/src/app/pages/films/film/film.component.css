@@ -5,7 +5,7 @@
     height:360px;
     background-color: rgb(48, 46, 46);
     color: rgba(255, 255, 255, 0.744);
-    margin-top: 80px;
+    margin-top: 79px;
     overflow-y: hidden;
     scrollbar-color: aquamarine;
     text-align: left;
@@ -76,5 +76,14 @@
     }
     .synopsis {
         width: 95%;
+    }
+}
+
+@media screen and (min-width: 1126px){
+    .film_datos{
+        padding: 10px 20px;
+    }
+    .synopsis{
+        padding-left: 20px;
     }
 }

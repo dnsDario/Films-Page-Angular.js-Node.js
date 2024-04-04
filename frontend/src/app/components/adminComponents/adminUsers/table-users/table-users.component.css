@@ -1,0 +1,88 @@
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 350px;
+  height: auto;
+  background-color: black;
+  margin-top: 20px;
+}
+.titleInputAndButtonUsers{
+  display: flex;
+  flex-flow: column wrap;
+  width: 80%;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 10px;
+  border: 5px solid aquamarine;
+  border-radius: 20px;
+}
+.inputAndButtonUsers{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: none;
+  align-items: center;
+}
+.titleInputAndButtonUsers label{
+color: aquamarine;
+margin: 10px 20px;
+font-size: clamp(14px, 3vw, 22px);
+}
+.inputAndButtonUsers input{
+width: 60%;
+height: 30px;
+margin: 10px 20px;
+color: black;
+border-radius: 10px;
+text-align: center;
+}
+.inputAndButtonUsers button{
+width: 30%;
+height: 40px;
+border-radius: 10px;
+background-color: rgba(172, 255, 47, 0.527);
+color: yellow;
+font-size: clamp(12px, 2vw, 16px);
+font-weight: 700;
+}
+.inputAndButtonUsers button:hover{
+cursor: pointer;
+scale:1.1;
+}
+
+table {
+  display: block;
+  max-width: 90%;
+  border-collapse: collapse;
+  font-size: 12px;    
+  margin: 30px auto;
+}
+table thead, table tbody{
+border: 5px solid aquamarine;
+}
+table thead{
+height: 40px;
+}
+table tbody{
+width: 100%;
+}
+
+table th, table td {
+height: 120px;
+color:white;
+border: 3px solid aquamarine;
+padding: 5px;
+text-align: center;
+font-size: 13px;
+}
+table th {
+height: 50px;
+background-color: #000000;
+font-weight: bold;
+
+}
+table tr:hover {
+background-color: #423d3d;
+}
+

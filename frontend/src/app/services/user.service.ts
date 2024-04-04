@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable} from '@angular/core';
 import { UserLoginData } from '../interfaces/dto/user-login-data';
 import { UserRegisterData } from '../interfaces/dto/user-register-data';
 import { CookieService } from 'ngx-cookie-service';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,7 @@ export class UserService{
 
   constructor(
     private http: HttpClient, 
-    private cookies: CookieService,
-    
+    private cookies: CookieService,    
     ) {
       const role = this.cookies.get('role')
       this.roleSubject.next(role)
@@ -48,10 +47,15 @@ export class UserService{
   logout(){
     this.cookies.delete('token'),
     this.cookies.delete('role'),
-    this.roleSubject.next('')
+    this.roleSubject.next(''),
     this.tokenSubject.next('')
   }
-  deleteUser(id:string , token:string){
-    this.http.delete(`${this.url}/login/:${id}?token=${this.cookies.get('token')}`)
+
+  findAllUsers(){
+    return (this.http.get(`${this.url}?token=${this.cookies.get('token')}`));
+  }
+
+  deleteUser(id:string){
+    return this.http.delete(`${this.url}/${id}?token=${this.cookies.get('token')}`)
   }
 }
