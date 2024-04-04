@@ -31,6 +31,10 @@ label{
     color:white;
     margin-bottom: 5px;
 }
+small{
+    color: white;
+    font-size: 10px;
+}
 
 .form_fieldset_button_verPwd {
     width: 25px;;

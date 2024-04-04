@@ -2,24 +2,44 @@
     <fieldset class="form_fieldset">
         <label for="name">Nombre:</label>
         <input class="form_fieldset_input" formControlName="name" type="text" placeholder=" Nombre">
+        @if(registerForm.get('name')?.touched && registerForm.get('name')?.errors){
+            <small>Este campo es obligatorio</small>
+        }
     </fieldset>
     <fieldset class="form_fieldset">
         <label for="email">Email:</label>
         <input class="form_fieldset_input" formControlName="email" type="email" placeholder=" Email">
+        @if(registerForm.get('email')?.touched && registerForm.get('email')?.errors){
+            @if(registerForm.get('email')?.errors!["required"]){
+                <small>Este campo es obligatorio</small>
+            }
+            @if (registerForm.get('email')?.errors!["pattern"]) {
+                <small>Formato de email incorrecto</small>
+            }
+            
+        }
     </fieldset>
     <fieldset class="form_fieldset">
         <label for="password">Contraseña:</label>
-        <div>
-            <input class="form_fieldset_input" formControlName="password" [type]="hidePassword? 'password':'text'" placeholder=" Password"/>
-        </div>
-        
+        <input class="form_fieldset_input" formControlName="password" type="password" placeholder=" Password">
+        @if(registerForm.get("password")?.touched && registerForm.get('password')?.errors){
+            @if(registerForm.get("password")?.errors!["required"]){
+                <small>Este campo es obligatorio</small>
+            }
+            @if (registerForm.get("password")?.errors!["pattern"]) {
+                <small>+8 caracteres, numeros o/y letras </small>
+            }
+        }
     </fieldset>
     <fieldset class="form_fieldset">
         <label for="password">Repite la Contraseña:</label>
-        <div>
-            <input class="form_fieldset_input" formControlName="repetirPassword" [type]="hidePassword? 'password':'text'" placeholder=" Repite la contraseña"/>
-        </div>
+            <input class="form_fieldset_input" formControlName="repetirPassword" type="password" placeholder=" Repite la contraseña">
+        @if(registerForm.get('repetirPassword')?.touched && registerForm.get('repetirPassword')?.errors){
+            @if(registerForm.get('repetirPassword')?.errors!["required"]){
+                <small>Este campo es obligatorio</small>
+            }
+        }
         
     </fieldset>
-    <button class="form_button_submit" type="submit">Regístrate</button>
+    <button class="form_button_submit" type="submit" [disabled]="!registerForm.valid">Regístrate</button>
 </form>

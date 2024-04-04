@@ -9,7 +9,7 @@ export class AdminGuard implements CanActivate {
   constructor(private cookieService: CookieService) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    const cookieRol = this.cookieService.get('rol');
+    const cookieRol = this.cookieService.get('role');
     if (cookieRol === 'admin') {
       return true;
     } else {

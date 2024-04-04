@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { FormBuilder,FormControl,FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder,FormControl,FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserRegisterData } from '../../../interfaces/dto/user-register-data';
 import { UserService } from '../../../services/user.service';
 import { Router } from '@angular/router';
+import { register } from 'module';
 
 @Component({
   selector: 'app-register-form',
@@ -13,12 +14,12 @@ import { Router } from '@angular/router';
 })
 
 export class RegisterFormComponent {
-  hidePassword: boolean = true;
+
   registerForm: FormGroup = this.formBuilder.group({
     name: new FormControl(null, [Validators.required]),
-    email: new FormControl(null, [Validators.required, Validators.email]),
-    password: new FormControl(null, [Validators.required]),
-    repetirPassword: new FormControl(null, [Validators.required]),
+    email: new FormControl(null, [Validators.required, Validators.email, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')]),
+    password: new FormControl(null, [Validators.required, Validators.pattern('^[a-zA-Z0-9]+[a-zA-Z0-9]{7,}$')]),
+    repetirPassword: new FormControl(null, [Validators.required])
   });
 
   constructor(
