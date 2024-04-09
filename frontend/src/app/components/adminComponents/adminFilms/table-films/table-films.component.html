@@ -15,13 +15,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let x of (filmsFiltered.length > 0 ? filmsFiltered : films); let i = index">
+            @for(x of (filmsFiltered.length > 0 ? filmsFiltered : films); track x._id ){
+            <tr>
                 <td>
                     <img [src]="x.img" [alt]="x.title" />
                 </td>
                 <td>{{ x._id }}</td>
                 <td>{{ x.title }}</td>
             </tr>
+        }
         </tbody>
     </table>
 </div>
